@@ -33,7 +33,12 @@
             <input type="number" name="age" id="age" class="w-full border border-gray-300 rounded-md p-3 focus:ring-indigo-500 focus:border-indigo-500">
         </div>
         
-
+        <!-- Submit Button -->
+        <div class="flex justify-center">
+            <button type="submit" class="bg-indigo-500 text-white font-semibold rounded-md px-6 py-3 hover:bg-indigo-600 transition duration-300">
+                Submit
+            </button>
+        </div>
     </form>
 </div>
 
