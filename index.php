@@ -1,3 +1,31 @@
+<?php 
+include 'connect.php';
+
+if(isset($_POST['submit'])){
+
+    // Get form data
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $age = $_POST['age'];
+
+    // Corrected SQL query with quotes for string values
+    $sql = "INSERT INTO one (first_name, last_name, age) VALUES ('$fname', '$lname', $age)";
+
+    // Execute the query
+    $result = mysqli_query($conn, $sql);
+
+    // Check for successful insertion
+    if($result){
+        echo "<script>alert('Record inserted successfully.')</script>";
+    } else {
+        // Output any SQL errors for debugging
+        echo "<script>alert('Error: " . mysqli_error($conn) . "')</script>";
+    }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,10 +62,12 @@
         </div>
         
         <!-- Submit Button -->
-        <div class="flex justify-center">
-            <button type="submit" class="bg-indigo-500 text-white font-semibold rounded-md px-6 py-3 hover:bg-indigo-600 transition duration-300">
+        <div class="flex justify-center gap-4">
+            <button type="submit" name="submit" class="bg-indigo-500 text-white font-semibold rounded-md px-6 py-3 hover:bg-indigo-600 transition duration-300">
                 Submit
             </button>
+           
+            <a href="view.php" class="bg-indigo-500 text-white font-semibold rounded-md px-6 py-3 hover:bg-indigo-600 transition duration-300">View</a>
         </div>
     </form>
 </div>
