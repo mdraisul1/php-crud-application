@@ -9,22 +9,33 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div>
-        <h1 class="text-3xl font-bold underline">
-            PHP Crud Application
-        </h1>
-        <div>
-            <form action="" method="post">
-                <div>
-                    <label for="name">First Name</label>
-                    <input type="text" name="fname" id="name" class="border border-gray-400 p-2">
-                </div>
-                <div>
-                    <label for="name">Last Name</label>
-                    <input type="text" name="lname" id="name" class="border border-gray-400 p-2">
-                </div>
-            </form>
+<div class="max-w-[750px] mx-auto bg-white shadow-lg rounded-lg p-6 mt-10">
+    <h1 class="text-4xl font-bold text-center text-gray-800 mb-6">
+        PHP Crud Application
+    </h1>
+    <form action="" method="post">
+        <div class="grid grid-cols-2 gap-6 mb-4">
+            <!-- First Name Field -->
+            <div>
+                <label for="fname" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                <input type="text" name="fname" id="fname" class="w-full border border-gray-300 rounded-md p-3 focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+            <!-- Last Name Field -->
+            <div>
+                <label for="lname" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                <input type="text" name="lname" id="lname" class="w-full border border-gray-300 rounded-md p-3 focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
         </div>
-    </div>
+        
+        <!-- Age Field -->
+        <div class="mb-6">
+            <label for="age" class="block text-sm font-medium text-gray-700 mb-2">Age</label>
+            <input type="number" name="age" id="age" class="w-full border border-gray-300 rounded-md p-3 focus:ring-indigo-500 focus:border-indigo-500">
+        </div>
+        
+
+    </form>
+</div>
+
 </body>
 </html>
