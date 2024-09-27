@@ -19,6 +19,30 @@
                 </tr>
             </thead>
 
+            <tbody>
+                <?php
+                    include 'connect.php';
+                    // Corrected SQL query with quotes for string values
+                    $sql = "SELECT * FROM one";
+
+                    // Execute the query
+                    $result = mysqli_query($conn, $sql);
+                    $data = mysqli_num_rows($result);
+
+                    if($data){
+                        while($row = mysqli_fetch_assoc($result)){
+                            ?>
+                            <tr class="border-b border-gray-200">
+                                <td class="px-4 py-2"><?php echo $row['first_name']; ?></td>                              
+                                <td class="px-4 py-2"><?php echo $row['last_name']; ?></td>
+                                <td class="px-4 py-2"><?php echo $row['age']; ?></td>
+                            </tr>
+                            <?php
+                        }
+                    }
+                    
+                ?>
+            </tbody>
         </table>
     </div>
 </body>
