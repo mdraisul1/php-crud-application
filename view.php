@@ -18,6 +18,7 @@
                     <th class="px-4 py-2 text-gray-700 uppercase tracking-wide font-semibold">Last Name</th>
                     <th class="px-4 py-2 text-gray-700 uppercase tracking-wide font-semibold">Age</th>
                     <th class="px-4 py-2 text-gray-700 uppercase tracking-wide font-semibold">Action</th>
+                    <th class="px-4 py-2 text-gray-700 uppercase tracking-wide font-semibold"> Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,6 +38,12 @@
                                 <td class="px-4 py-3">
                                     <a href="update.php?id=<?php echo $row['id']; ?>" class="bg-indigo-500 text-white font-semibold rounded-md px-4 py-2 hover:bg-indigo-600 transition duration-300">
                                         Update
+                                    </a>
+                                </td>
+                                <td>
+                                    <!-- delete -->
+                                    <a href="delete.php?id=<?php echo $row['id']; ?>" class="bg-red-500 text-white font-semibold rounded-md px-4 py-2 hover:bg-red-600 transition duration-300">
+                                        Delete
                                     </a>
                                 </td>
                             </tr>
